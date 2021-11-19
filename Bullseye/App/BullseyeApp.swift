@@ -9,6 +9,15 @@ import SwiftUI
 
 @main
 struct BullseyeApp: App {
+    init() {
+        #if DEVELOPMENT
+        print("This only executes when building with the DEVELOPMENT scheme")
+        #elseif DEBUG
+        print("This only executes when building with the DEBUG scheme")
+        #else
+        print("Release scheme selected")
+        #endif
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()

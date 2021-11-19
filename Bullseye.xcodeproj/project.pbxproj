@@ -59,6 +59,9 @@
 		2B46E58B273F1F8E0058E08B /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 		2B46E58D273F2F270058E08B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B46E58F273F3E6A0058E08B /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		2B5E6229274722A600FC3F20 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		2B5E622A274722C100FC3F20 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		2B5E622B274722DF00FC3F20 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		2BDD63AB273EE89D00F8C95D /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +113,7 @@
 		2B3989AB2739C52700930CC5 /* Bullseye */ = {
 			isa = PBXGroup;
 			children = (
+				2B5E62282747227100FC3F20 /* Configs */,
 				2B3989D8273B1C7F00930CC5 /* App */,
 				2B3989D7273B1C7200930CC5 /* Views */,
 				2B3989D6273B1C6A00930CC5 /* Models */,
@@ -175,6 +179,16 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		2B5E62282747227100FC3F20 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E6229274722A600FC3F20 /* Development.xcconfig */,
+				2B5E622A274722C100FC3F20 /* Debug.xcconfig */,
+				2B5E622B274722DF00FC3F20 /* Release.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,12 +196,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B3989CD2739C52A00930CC5 /* Build configuration list for PBXNativeTarget "Bullseye" */;
 			buildPhases = (
-				53B0071BA535051F54EA819A /* [RC] RemoteCache_prebuild */,
 				2B3989A52739C52700930CC5 /* Sources */,
 				2B3989A62739C52700930CC5 /* Frameworks */,
 				2B3989A72739C52700930CC5 /* Resources */,
-				0DAE15D7207DACFB6C12C66D /* [RC] RemoteCache_postbuild */,
-				AC0EFC6A4A963A95043F27CE /* [RC] RemoteCache_mark */,
 			);
 			buildRules = (
 			);
@@ -202,11 +213,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B3989D02739C52A00930CC5 /* Build configuration list for PBXNativeTarget "BullseyeTests" */;
 			buildPhases = (
-				53B0071BA535051F54EA819A /* [RC] RemoteCache_prebuild */,
 				2B3989B52739C52A00930CC5 /* Sources */,
 				2B3989B62739C52A00930CC5 /* Frameworks */,
 				2B3989B72739C52A00930CC5 /* Resources */,
-				0DAE15D7207DACFB6C12C66D /* [RC] RemoteCache_postbuild */,
 			);
 			buildRules = (
 			);
@@ -222,11 +231,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B3989D32739C52A00930CC5 /* Build configuration list for PBXNativeTarget "BullseyeUITests" */;
 			buildPhases = (
-				53B0071BA535051F54EA819A /* [RC] RemoteCache_prebuild */,
 				2B3989BF2739C52A00930CC5 /* Sources */,
 				2B3989C02739C52A00930CC5 /* Frameworks */,
 				2B3989C12739C52A00930CC5 /* Resources */,
-				0DAE15D7207DACFB6C12C66D /* [RC] RemoteCache_postbuild */,
 			);
 			buildRules = (
 			);
@@ -307,109 +314,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0DAE15D7207DACFB6C12C66D /* [RC] RemoteCache_postbuild */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			dependencyFile = "$(TARGET_TEMP_DIR)/postbuild.d";
-			files = (
-			);
-			inputPaths = (
-				/Users/bmcadams/development/Bullseye/xcremotecache/xcpostbuild,
-			);
-			name = "[RC] RemoteCache_postbuild";
-			outputPaths = (
-				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH).swiftmodule.md5",
-				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH)-$(LLVM_TARGET_TRIPLE_VENDOR)-$(SWIFT_PLATFORM_TARGET_PREFIX)$(LLVM_TARGET_TRIPLE_SUFFIX).swiftmodule.md5",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
-		};
-		193A2D1D6E96BB5B29CFD206 /* [RC] RemoteCache_mark */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				/Users/bmcadams/development/Bullseye/xcremotecache/xcprepare,
-			);
-			name = "[RC] RemoteCache_mark";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\" mark --configuration \"$CONFIGURATION\" --platform \"$PLATFORM_NAME\"";
-		};
-		53B0071BA535051F54EA819A /* [RC] RemoteCache_prebuild */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			dependencyFile = "$(TARGET_TEMP_DIR)/prebuild.d";
-			files = (
-			);
-			inputPaths = (
-				/Users/bmcadams/development/Bullseye/xcremotecache/xcprebuild,
-			);
-			name = "[RC] RemoteCache_prebuild";
-			outputPaths = (
-				"$(TARGET_TEMP_DIR)/rc.enabled",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
-		};
-		5BE4369A57BD7559BDFFBA2A /* [RC] RemoteCache_postbuild */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			dependencyFile = "$(TARGET_TEMP_DIR)/postbuild.d";
-			files = (
-			);
-			inputPaths = (
-				/Users/bmcadams/development/Bullseye/xcremotecache/xcpostbuild,
-			);
-			name = "[RC] RemoteCache_postbuild";
-			outputPaths = (
-				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH).swiftmodule.md5",
-				"$(TARGET_BUILD_DIR)/$(MODULES_FOLDER_PATH)/$(PRODUCT_MODULE_NAME).swiftmodule/$(PLATFORM_PREFERRED_ARCH)-$(LLVM_TARGET_TRIPLE_VENDOR)-$(SWIFT_PLATFORM_TARGET_PREFIX)$(LLVM_TARGET_TRIPLE_SUFFIX).swiftmodule.md5",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
-		};
-		AC0EFC6A4A963A95043F27CE /* [RC] RemoteCache_mark */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				/Users/bmcadams/development/Bullseye/xcremotecache/xcprepare,
-			);
-			name = "[RC] RemoteCache_mark";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\" mark --configuration \"$CONFIGURATION\" --platform \"$PLATFORM_NAME\"";
-		};
-		B6D67AD6755505C9FDDCC047 /* [RC] RemoteCache_prebuild */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			dependencyFile = "$(TARGET_TEMP_DIR)/prebuild.d";
-			files = (
-			);
-			inputPaths = (
-				/Users/bmcadams/development/Bullseye/xcremotecache/xcprebuild,
-			);
-			name = "[RC] RemoteCache_prebuild";
-			outputPaths = (
-				"$(TARGET_TEMP_DIR)/rc.enabled",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SCRIPT_INPUT_FILE_0\"";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		2B3989A52739C52700930CC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -463,6 +367,7 @@
 /* Begin XCBuildConfiguration section */
 		2B3989CB2739C52A00930CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E622A274722C100FC3F20 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -524,6 +429,7 @@
 		};
 		2B3989CC2739C52A00930CC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E622B274722DF00FC3F20 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -579,6 +485,7 @@
 		};
 		2B3989CE2739C52A00930CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E622A274722C100FC3F20 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -597,12 +504,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_CFLAGS = "$(inherited) -fdebug-prefix-map=/Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fdebug-prefix-map=/Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmcadams.Bullseye;
 				PRODUCT_NAME = "Bull's Eye";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_EXEC = /Users/bmcadams/development/Bullseye/xcremotecache/xcswiftc;
+				SWIFT_EXEC = swiftc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XCRC_FAKE_SRCROOT = /xxxxxxxxxx;
@@ -611,6 +521,7 @@
 		};
 		2B3989CF2739C52A00930CC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E622B274722DF00FC3F20 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -639,6 +550,7 @@
 		};
 		2B3989D12739C52A00930CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E622A274722C100FC3F20 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -652,7 +564,10 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_CFLAGS = "$(inherited) -fdebug-prefix-map=/Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fdebug-prefix-map=/Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmcadams.BullseyeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -667,6 +582,7 @@
 		};
 		2B3989D22739C52A00930CC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E622B274722DF00FC3F20 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -691,6 +607,7 @@
 		};
 		2B3989D42739C52A00930CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E622A274722C100FC3F20 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -702,7 +619,10 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_CFLAGS = "$(inherited) -fdebug-prefix-map=/Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)";
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fdebug-prefix-map=/Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bmcadams.BullseyeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -717,6 +637,7 @@
 		};
 		2B3989D52739C52A00930CC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E622B274722DF00FC3F20 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -737,6 +658,167 @@
 			};
 			name = Release;
 		};
+		2B5E62242747212700FC3F20 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E6229274722A600FC3F20 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEVELOPMENT";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Development;
+		};
+		2B5E62252747212700FC3F20 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E6229274722A600FC3F20 /* Development.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = DevAccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Bullseye/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fdebug-prefix-map=/Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmcadams.Bullseye;
+				PRODUCT_NAME = "Bull's Eye";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_EXEC = swiftc;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				XCRC_FAKE_SRCROOT = /xxxxxxxxxx;
+			};
+			name = Development;
+		};
+		2B5E62262747212700FC3F20 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E6229274722A600FC3F20 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fdebug-prefix-map=/Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmcadams.BullseyeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_EXEC = /Users/bmcadams/development/Bullseye/xcremotecache/xcswiftc;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bullseye.app/Bullseye";
+				XCRC_FAKE_SRCROOT = /xxxxxxxxxx;
+			};
+			name = Development;
+		};
+		2B5E62272747212700FC3F20 /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B5E6229274722A600FC3F20 /* Development.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fdebug-prefix-map=/Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -debug-prefix-map /Users/bmcadams/development/Bullseye=$(XCRC_FAKE_SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmcadams.BullseyeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_EXEC = /Users/bmcadams/development/Bullseye/xcremotecache/xcswiftc;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bullseye;
+				XCRC_FAKE_SRCROOT = /xxxxxxxxxx;
+			};
+			name = Development;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -744,6 +826,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2B3989CB2739C52A00930CC5 /* Debug */,
+				2B5E62242747212700FC3F20 /* Development */,
 				2B3989CC2739C52A00930CC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -753,6 +836,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2B3989CE2739C52A00930CC5 /* Debug */,
+				2B5E62252747212700FC3F20 /* Development */,
 				2B3989CF2739C52A00930CC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -762,6 +846,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2B3989D12739C52A00930CC5 /* Debug */,
+				2B5E62262747212700FC3F20 /* Development */,
 				2B3989D22739C52A00930CC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -771,6 +856,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2B3989D42739C52A00930CC5 /* Debug */,
+				2B5E62272747212700FC3F20 /* Development */,
 				2B3989D52739C52A00930CC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

@@ -1,0 +1,11 @@
+//
+//  Release.xcconfig
+//  Bullseye
+//
+//  Created by Benjamin McAdams on 11/18/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+CT_ACCENT_COLOR = AccentColor
